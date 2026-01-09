@@ -127,8 +127,8 @@ func TestComputeBoostFactor(t *testing.T) {
 	}{
 		{"main.go", 1.0},
 		{"foo_test.go", 0.5},
-		{"project/src/main.go", 1.1},             // matches /src/
-		{"project/tests/foo_test.go", 0.25},      // matches /tests/ and _test.
+		{"project/src/main.go", 1.1},        // matches /src/
+		{"project/tests/foo_test.go", 0.25}, // matches /tests/ and _test.
 	}
 
 	for _, tt := range tests {

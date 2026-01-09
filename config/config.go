@@ -35,9 +35,9 @@ type HybridConfig struct {
 }
 
 type BoostConfig struct {
-	Enabled   bool          `yaml:"enabled"`
-	Penalties []BoostRule   `yaml:"penalties"`
-	Bonuses   []BoostRule   `yaml:"bonuses"`
+	Enabled   bool        `yaml:"enabled"`
+	Penalties []BoostRule `yaml:"penalties"`
+	Bonuses   []BoostRule `yaml:"bonuses"`
 }
 
 type BoostRule struct {

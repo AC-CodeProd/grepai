@@ -126,7 +126,7 @@ func TestTokenize(t *testing.T) {
 	}{
 		{"hello world", []string{"hello", "world"}},
 		{"UPPER CASE", []string{"upper", "case"}},
-		{"a b c", []string{}}                  , // single letters filtered
+		{"a b c", []string{}}, // single letters filtered
 		{"the user login", []string{"the", "user", "login"}},
 		{"", []string{}},
 	}

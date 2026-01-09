@@ -52,7 +52,7 @@ func TextSearch(ctx context.Context, chunks []store.Chunk, query string, limit i
 // k is the RRF constant (typically 60).
 // Results are deduplicated by chunk ID and sorted by combined RRF score.
 func ReciprocalRankFusion(k float32, limit int, lists ...[]store.SearchResult) []store.SearchResult {
-	scores := make(map[string]float32)    // chunkID -> RRF score
+	scores := make(map[string]float32)       // chunkID -> RRF score
 	chunkMap := make(map[string]store.Chunk) // chunkID -> chunk
 
 	for _, list := range lists {
@@ -63,7 +63,7 @@ func ReciprocalRankFusion(k float32, limit int, lists ...[]store.SearchResult) [
 		}
 	}
 
-	var results []store.SearchResult
+	results := make([]store.SearchResult, 0, len(scores))
 	for id, score := range scores {
 		results = append(results, store.SearchResult{
 			Chunk: chunkMap[id],
