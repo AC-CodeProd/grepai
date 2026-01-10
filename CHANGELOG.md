@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-01-10
+
+### Added
+- **Call Graph Tracing**: New `grepai trace` command for code navigation
+  - `trace callers <symbol>` - find all functions calling a symbol
+  - `trace callees <symbol>` - find all functions called by a symbol
+  - `trace graph <symbol>` - build call graph with configurable depth
+- Regex-based symbol extraction (fast mode) for Go, JS/TS, Python, PHP
+- Tree-sitter integration (precise mode) with build tag `treesitter`
+- Separate symbol index stored in `.grepai/symbols.gob`
+- JSON output for AI agent integration (`--json` flag)
+- Automatic symbol indexing during `grepai watch`
+
 ## [0.4.0] - 2026-01-10
 
 ### Added
@@ -60,7 +73,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial public release
 
-[Unreleased]: https://github.com/yoanbernabeu/grepai/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/yoanbernabeu/grepai/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/yoanbernabeu/grepai/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/yoanbernabeu/grepai/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/yoanbernabeu/grepai/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/yoanbernabeu/grepai/compare/v0.1.0...v0.2.0
