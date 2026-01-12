@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.13.0] - 2026-01-12
+
+### Added
+
+- **Self-Update Command**: New `grepai update` command for automatic updates (#42)
+  - `grepai update --check`: Check for available updates without installing
+  - `grepai update`: Download and install the latest version from GitHub releases
+  - `grepai update --force`: Force update even if already on latest version
+  - Automatic platform detection (linux/darwin/windows, amd64/arm64)
+  - SHA256 checksum verification before installation
+  - Progress bar during download
+  - Graceful error handling for network issues, rate limits, and permission errors
+
+### Changed
+
+- **Makefile**: Uses Docker for consistent linting with golangci-lint v1.64.2
+
 ## [0.12.0] - 2026-01-12
 
 ### Fixed
@@ -177,7 +194,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial public release
 
-[Unreleased]: https://github.com/yoanbernabeu/grepai/compare/v0.12.0...HEAD
+[Unreleased]: https://github.com/yoanbernabeu/grepai/compare/v0.13.0...HEAD
+[0.13.0]: https://github.com/yoanbernabeu/grepai/compare/v0.12.0...v0.13.0
 [0.12.0]: https://github.com/yoanbernabeu/grepai/compare/v0.11.0...v0.12.0
 [0.11.0]: https://github.com/yoanbernabeu/grepai/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/yoanbernabeu/grepai/compare/v0.9.0...v0.10.0
