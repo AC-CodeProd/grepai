@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"time"
 
 	"gopkg.in/yaml.v3"
 )
@@ -86,7 +87,8 @@ type ChunkingConfig struct {
 }
 
 type WatchConfig struct {
-	DebounceMs int `yaml:"debounce_ms"`
+	DebounceMs    int       `yaml:"debounce_ms"`
+	LastIndexTime time.Time `yaml:"last_index_time,omitempty"`
 }
 
 type TraceConfig struct {
