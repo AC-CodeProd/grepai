@@ -4,6 +4,8 @@
 
 ### grep for the AI era
 
+[![Product Hunt](https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1067661&theme=light)](https://www.producthunt.com/products/grepai)
+
 [![GitHub stars](https://img.shields.io/github/stars/yoanbernabeu/grepai?style=flat&logo=github)](https://github.com/yoanbernabeu/grepai/stargazers)
 [![Downloads](https://img.shields.io/github/downloads/yoanbernabeu/grepai/total?style=flat&logo=github)](https://github.com/yoanbernabeu/grepai/releases)
 [![Go](https://github.com/yoanbernabeu/grepai/actions/workflows/ci.yml/badge.svg)](https://github.com/yoanbernabeu/grepai/actions/workflows/ci.yml)
