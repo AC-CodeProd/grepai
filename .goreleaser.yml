@@ -78,12 +78,15 @@ release:
 
     **Full Changelog**: https://github.com/yoanbernabeu/grepai/compare/{{ .PreviousTag }}...{{ .Tag }}
 
-# Homebrew tap can be added later when homebrew-tap repo is created
-# brews:
-#   - repository:
-#       owner: yoanbernabeu
-#       name: homebrew-tap
-#     directory: Formula
-#     homepage: https://github.com/yoanbernabeu/grepai
-#     description: "Privacy-first semantic code search CLI"
-#     license: MIT
+brews:
+  - repository:
+      owner: yoanbernabeu
+      name: homebrew-tap
+    directory: Formula
+    homepage: https://github.com/yoanbernabeu/grepai
+    description: "Privacy-first semantic code search CLI"
+    license: MIT
+    install: |
+      bin.install "grepai"
+    test: |
+      system "#{bin}/grepai", "--version"
